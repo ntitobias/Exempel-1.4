@@ -8,14 +8,36 @@ namespace Exempel_1._4
 {
     class Account
     {
-        private string userName;
-        private string passWord;
+        private string username;
+        private string password;
 
-        public string UserName
+        public Account(string username, string password)
         {
-            get { return userName; }
-            set { userName = value; }
+            this.username = username;
+            this.password = password;
         }
 
+        public string Username
+        {
+            get { return username; }
+        }
+
+        public string Password
+        {
+            get { return password; }
+        }
+
+        public static bool CheckPassword(string password)
+        {
+            if (password.Length >= 8) 
+                return true;
+            else
+                return false;
+        }
+
+        public override string ToString()
+        {
+            return username;
+        }
     }
 }

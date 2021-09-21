@@ -33,10 +33,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbxUser = new System.Windows.Forms.TextBox();
             this.tbxPassword = new System.Windows.Forms.TextBox();
-            this.tbxUsers = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.lbxUsers = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -79,14 +79,7 @@
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(100, 26);
             this.tbxPassword.TabIndex = 4;
-            // 
-            // tbxUsers
-            // 
-            this.tbxUsers.Location = new System.Drawing.Point(461, 69);
-            this.tbxUsers.Multiline = true;
-            this.tbxUsers.Name = "tbxUsers";
-            this.tbxUsers.Size = new System.Drawing.Size(271, 102);
-            this.tbxUsers.TabIndex = 5;
+            this.tbxPassword.UseSystemPasswordChar = true;
             // 
             // btnRegister
             // 
@@ -119,16 +112,26 @@
             this.lblInfo.TabIndex = 8;
             this.lblInfo.Text = "Infotext";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblInfo.Visible = false;
+            // 
+            // lbxUsers
+            // 
+            this.lbxUsers.FormattingEnabled = true;
+            this.lbxUsers.ItemHeight = 20;
+            this.lbxUsers.Location = new System.Drawing.Point(461, 75);
+            this.lbxUsers.Name = "lbxUsers";
+            this.lbxUsers.Size = new System.Drawing.Size(295, 104);
+            this.lbxUsers.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbxUsers);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.tbxUsers);
             this.Controls.Add(this.tbxPassword);
             this.Controls.Add(this.tbxUser);
             this.Controls.Add(this.label3);
@@ -148,10 +151,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxUser;
         private System.Windows.Forms.TextBox tbxPassword;
-        private System.Windows.Forms.TextBox tbxUsers;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.ListBox lbxUsers;
     }
 }
 
