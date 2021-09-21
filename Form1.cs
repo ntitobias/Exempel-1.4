@@ -32,20 +32,23 @@ namespace Exempel_1._4
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            bool found = false;
             foreach (Account account in accounts)
             {
                 if(account.Username == tbxUser.Text && account.Password == tbxPassword.Text)
                 {
                     lblInfo.Text = "Välkommen\r\n" + account.Username;
                     lblInfo.Visible = true;
+                    found = true;
                 }
-                else
-                {
-                    lblInfo.Visible = false;
-                    MessageBox.Show("Felaktigt användarnamn eller lösenord.");
-                }
-
             }
+
+            if (!found)
+            {
+                lblInfo.Visible = false;
+                MessageBox.Show("Felaktigt användarnamn eller lösenord.");
+            }
+
         }
     }
 
